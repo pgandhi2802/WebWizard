@@ -1,0 +1,11 @@
+<?php
+    session_start();
+    if($_SESSION['loggedin'])
+    {
+         session_destroy();
+         $_SESSION['loggedin']=false;
+         $_SESSION['f_name']=null;
+         $_SESSION['user']=0;
+    }
+        header("location:../search/search.php");
+?>
